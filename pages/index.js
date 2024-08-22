@@ -3,13 +3,12 @@ import { createCompleteRequest } from '@/utils/webhookutil';
 
 export default function Home() {
   const { sendRequest } = useWebhookRequest();
-  const webhookUrl = '/api/hello';
+  const webhookUrl = 'https://webhook.site/da2b574f-7a6f-4046-8665-934dbf7e2b7d';
 
   const handleButtonClick = () => {
     const requestData = {
       message: 'Hi! This request was created by Keshav Agrawal.',
       reqTime: new Date().getTime(),
-      reqId: '',
     };
     sendRequest(createCompleteRequest(webhookUrl, requestData));
   };
